@@ -58,14 +58,35 @@ table .descripcion-tabla{
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 30px;
+  margin-top: 20px;
 }
 .grid-container{
-  background-color: rgb(190, 190, 190);
+  background-color: rgba(190, 190, 190, 0.637);
   border-radius: 10px;
   padding: 20px;
   display: grid;
   grid-template-columns: minmax(200px, 570px);
   justify-content: center;
+}
+
+.grid-container div h2{
+  background: rgb(0, 30, 201);
+  color:white;
+  border-radius: 10px;
+}
+
+.grid-container div p{
+  color: black;
+  font-size: 20px;
+}
+
+.grid-plans h5{
+  color: black;
+  font-size: 17px;
+}
+
+.grid-plans p{
+  color: rgb(54, 52, 52);
 }
 .grid-container .grid-plans{
   padding-left: 0;
@@ -83,7 +104,7 @@ table .descripcion-tabla{
 }
 .grid-container-arrow .arrow{
   height: 100px;
-  background-color: rgb(119, 255, 0);
+  background-color: rgb(99, 7, 102);
   display: flex;
   justify-content: center;
   align-items: center;
