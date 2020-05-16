@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 nav{
   background-color: transparent !important;
 }
@@ -241,7 +244,7 @@ main section h2{
 #planes{
   z-index: 2;
   position: relative; 
-  background: url(../img/background-code-2.jpg);
+  background: url(../img/background-code.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -535,7 +538,8 @@ main section h2{
   background-position: 50% 50%;
 } 
 /* ---- stats.js ---- */ 
-.count-particles{ background: #000022;
+.count-particles{ 
+  background: #000022;
   position: absolute;
   top: 48px;
   left: 0;
