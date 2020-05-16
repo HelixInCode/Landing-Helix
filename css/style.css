@@ -5,7 +5,6 @@ nav{
   background: rgb(1,46,68);
   background: linear-gradient(90deg, rgba(1,46,68,1) 0%, rgba(2,118,175,1) 100%);
 }
-hr
 .navbar{
   box-shadow: none !important;
 }
@@ -114,7 +113,8 @@ main section h2{
 }
 .grid-servicios{
   display: grid;
-  grid-template-columns: 1fr
+  grid-template-columns: 1fr;
+  justify-content: center;
 }
 #servicios .img-container{
   position: relative;  
@@ -136,17 +136,18 @@ main section h2{
   font-weight: bold;
   font-size: 30px;
 }
-
 #servicios .img-container:hover{
   z-index: 3;
 }
+
 #nosotros{
   z-index: 2;
   position: relative;
-  background-color: #fff;
+  background-color: #16161600;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 400px;
+  justify-content: center;
   text-align: justify;
 }
 #nosotros h2{
@@ -162,13 +163,13 @@ main section h2{
 #nosotros .nosotros-description p:nth-of-type(3){
   margin: 0;
 }
-
 #nosotros .laptop-background{
   background-image: url(../img/Laptop.jpg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 #portafolio{
   z-index: 3;
   position: relative; 
@@ -236,22 +237,63 @@ main section h2{
 #portafolio > .portafolio-container > .portafolio-item:hover > .item-description{
   transform: translateY(100px);
 }
+
 #planes{
-  z-index: 3;
+  z-index: 2;
   position: relative; 
-  background-color: rgba(1,46,68,1);
+  background: url(../img/background-code-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   display: grid;
-  grid-template-columns: minmax(300px, 1400px);
+  grid-template-columns: minmax(300px, 810px);
   justify-content: center;
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
+}
+#planes > h2{
+  z-index: 1;
+  position: relative; 
+  color: #fff;
+} 
+#planes > hr{
+  z-index: 1;
+  position: relative;
+  width: 100px; 
+  height:1px; 
+  background-color: #fff; 
+}
+#planes > div:nth-of-type(2){
+  z-index: 0;
+  position: absolute; 
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.802); 
 }
 #planes > .planes-container{
+  z-index: 1;
+  position: relative; 
   display: grid;
-  grid-template-columns: minmax(100px, 250px);
+  grid-template-columns: minmax(100px, 300px);
   justify-content: center;
   grid-gap: 10px;
+  grid-row-gap: 10px;
+}
+#planes > .planes-container > a{
+  z-index: 0;
+  position: relative;
+  padding: 5px 0;
+  margin: 0;
+  margin-top: 10px;
+  border-color: rgb(7, 96, 251);
 }
 #planes > .planes-container > .item-planes{
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+  margin: 0;
   padding-left: 0;
   border-radius: 10px;
   text-align: center;
@@ -277,6 +319,7 @@ main section h2{
 #planes > .planes-container > .item-planes > li:nth-of-type(1){
   padding: 10px 0;
   border-radius: 10px 10px 0 0;
+  font-size: 20px;
   background-color: rgba(0, 0, 0, 0.496);
 }
 #planes > .planes-container > .item-planes > li:nth-of-type(2){
@@ -295,18 +338,21 @@ main section h2{
   padding: 5px 0;
   margin: 0;
   margin-top: 10px;
+  /* font-size: 20px; */
 }
 
 #contacto{
   color: #fff;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(300px, 810px);
   justify-content: center;
   background-color: rgb(17, 17, 17);
 }
 #contacto > div{
-  width: 95%;
-  background-color: rgba(10, 10, 10, 0.673);
   z-index: 2;
+  width: 100%;
+  background-color: rgba(10, 10, 10, 0.673);
+  justify-self: center;
   border-radius: 10px;
 }
 #contacto h3{
@@ -315,7 +361,7 @@ main section h2{
 }
 #contacto .formulario{
   display: grid;
-  /* grid-template: auto auto auto auto 100px auto / 1fr; */
+  grid-template: auto auto auto auto 100px auto / 1fr;
   grid-gap: 10px;
 }
 #contacto .formulario > div{
@@ -386,10 +432,6 @@ main section h2{
   .navbar-brand{
     transform: translateX(0);
   }
-  #portafolio > .portafolio-container{
-    grid-template-columns: repeat(2, minmax(100px, 466.66px));
-  }
-
 }
 @media screen and (min-width:625px){
   #contacto .formulario{
@@ -413,10 +455,18 @@ main section h2{
   #planes > .planes-container{
     grid-template-columns: repeat(3, minmax(100px, 250px));
   }
+  #planes > .planes-container > a{
+    grid-column: 2 / 3;
+    margin-top: 0;
+    transform: translateY(-100px);
+  }
+  #planes > .planes-container:hover > a{
+    transform: translateY(0);
+  }
 }
 @media screen and (min-width:768px){
   .grid-servicios{
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(200px, 470px));
   }
   #servicios .img-container{
     border: 5px solid rgb(66, 66, 66);
@@ -428,7 +478,7 @@ main section h2{
     transform: scale(1.1);
   }
   #nosotros{
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(300px, 720px));
     grid-template-rows: auto;
   }
   #nosotros .laptop-background{
@@ -441,6 +491,7 @@ main section h2{
     grid-gap: 30px;
   }
 }
+
 @media screen and (min-width:791px){
   .background-cover{
     grid-template-columns: .5fr;
