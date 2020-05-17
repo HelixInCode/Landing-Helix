@@ -1,5 +1,7 @@
 .sep-principal{
-  background-color: rgb(95, 95, 95); width: minmax(100px, 300px); height:2px;
+  width: minmax(100px, 300px); 
+  height:2px;
+  background-color: #fff;
 }
 h2 #titulo{
   color: rgb(113, 22, 150);
@@ -8,46 +10,16 @@ h2 #titulo{
   text-align: center;
   padding-top: 100px;
 }
-.card-definida{
-  background-color: rgba(189, 189, 189, 0.521);
-  border-radius: 25px;
-  padding: 20px;
-}
-
-.titulo-card{
-  margin: 10px;
-  background: rgb(6, 139, 206);
-  border-radius: 10px;
-}
-.titulo-card p{
-  font-size: 40px;
-  color: white;
-  padding: 10px 30px;
-}
-.descripcion{
-  font-size: 25px;
-  color: #222222;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-align: center;
-}
-.table-text{
-  text-align: center;
-}
-
-main table td{
-  font-size: 24px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: #000000c2;
-}
-
-table .descripcion-tabla{
-  font-size: 18px;
-  color: #411958;
-}
 
 /* ============== GRIDS ============== */
+.background-planes h1{
+  color: #0000007e;
+  font-weight: 900;
+}
 .background-planes{
-  background-image: url(../img/backplanes.png);
+  background: #00d2ff;
+  /* background: -webkit-linear-gradient(to bottom, #3a7bd5, #00d2ff);
+  background: linear-gradient(to top, #ffffff, #00d2ff); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -57,66 +29,69 @@ table .descripcion-tabla{
 .grid-global{
   display: grid;
   grid-template-columns: 1fr;
+  color: #fff;
   grid-gap: 30px;
   margin-top: 20px;
 }
-.grid-container{
-  background-color: rgba(190, 190, 190, 0.637);
+.grid-global > .grid-container{
+  background-color: #012e44;
   border-radius: 10px;
   padding: 20px;
   display: grid;
   grid-template-columns: minmax(200px, 570px);
   justify-content: center;
 }
-
-.grid-container div h2{
-  background: rgb(0, 30, 201);
+.grid-global > .grid-container > div:nth-of-type(1) > h2{
+  background-color: #0000007e;
   color:white;
   border-radius: 10px;
 }
-
-.grid-container div p{
-  color: black;
+.grid-global > .grid-container > div:nth-of-type(2) > p{
   font-size: 20px;
 }
-
-.grid-plans h5{
-  color: black;
-  font-size: 17px;
+.grid-global > .grid-container > .grid-plans > li{
+  padding-top: 10px;
+  background-color: #0000007e;
 }
-
-.grid-plans p{
-  color: rgb(54, 52, 52);
+.grid-global > .grid-container > .grid-plans > li > h5{
+  font-weight: 700;
+  font-size: 25px;
 }
-.grid-container .grid-plans{
+.grid-global > .grid-container > .grid-plans > li > p{
+  font-weight: 500;
+}
+.grid-global > .grid-container .grid-plans{
   padding-left: 0;
   display: grid;
   grid-template-columns: minmax(160px, 570px);
   grid-gap: 10px;
 }
-.grid-container .grid-plans li{
+.grid-global > .grid-container > .grid-plans > li{
   list-style: none;
 }
-.grid-container-arrow{
+.grid-global > .grid-container-arrow{
   display: grid;
   grid-template-columns: minmax(300px, 100%);
   align-content: center;
 }
-.grid-container-arrow .arrow{
+.grid-global > .grid-container-arrow .arrow{
   height: 100px;
   background-color: rgb(99, 7, 102);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.grid-container-arrow .arrow span{
+.grid-global > .grid-container-arrow .arrow span{
   font-weight: bold;
 }
+.grid-global > .grid-container-arrow > .btn{
+  border-color: #0000007e;
+}
 @media screen and (min-width: 567px){
-  .grid-container{
+  .grid-global > .grid-container{
     grid-template-columns: minmax(320px, 900px);
   }
-  .grid-container .grid-plans{
+  .grid-global > .grid-container > .grid-plans{
     grid-template-columns:  repeat(2, minmax(160px, 450px));
   }
 }
@@ -124,10 +99,10 @@ table .descripcion-tabla{
   .grid-global{
     grid-template-columns: auto 1fr;
   }
-  .grid-container-arrow{
+  .grid-global > .grid-container-arrow{
     grid-template-columns: minmax(300px, 374px);
   }
-  .grid-container-arrow .arrow{
+  .grid-global > .grid-container-arrow > .arrow{
     height: 200px;
   }
 }
