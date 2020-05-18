@@ -60,7 +60,7 @@ h2 #titulo{
 .grid-global > .grid-container > .grid-plans > li > p{
   font-weight: 500;
 }
-.grid-global > .grid-container .grid-plans{
+.grid-global > .grid-container > .grid-plans{
   padding-left: 0;
   display: grid;
   grid-template-columns: minmax(160px, 570px);
@@ -74,17 +74,19 @@ h2 #titulo{
   grid-template-columns: minmax(300px, 100%);
   align-content: center;
 }
-.grid-global > .grid-container-arrow .arrow{
+.grid-global > .grid-container-arrow > .arrow{
   height: 100px;
-  background-color: rgb(99, 7, 102);
+  border-radius: 10px;
+  background-color: #ffe600;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.grid-global > .grid-container-arrow .arrow span{
+.grid-global > .grid-container-arrow > .arrow > span{
   font-weight: bold;
 }
 .grid-global > .grid-container-arrow > .btn{
+  /* border-color: #0000007e; */
   border-color: #0000007e;
 }
 @media screen and (min-width: 567px){
@@ -104,5 +106,7 @@ h2 #titulo{
   }
   .grid-global > .grid-container-arrow > .arrow{
     height: 200px;
+    border-radius: none;
+    clip-path: polygon(15% 0, 100% 1%, 100% 100%, 15% 100%, 0% 50%);
   }
 }

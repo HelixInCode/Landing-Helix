@@ -10,8 +10,8 @@ function cerrarItem (item, imagen, descripcion){
 }
 function abrirItem (item, imagen, descripcion){
   
-  imagen.style.transform = "translateY(-100px)"
-  descripcion.style.transform = "translateY(100px)"
+  imagen.style.transform = "translateY(-50%)"
+  descripcion.style.transform = "translateY(50%)"
   item.style.zIndex = "3"
 
 }
