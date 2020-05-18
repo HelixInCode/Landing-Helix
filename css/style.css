@@ -576,6 +576,68 @@ main section h2{
   border-radius: 0 0 3px 3px;
 }
 
+/*===================FOOTER===========================*/
+footer{
+  background: #1f1e1e;
+  display: grid;
+  grid-template-rows: .2fr 1fr .2fr;
+  font-family: 'Oswald', sans-serif;
+}
+
+footer .contenedor-superior{
+  display: grid;
+  grid-gap: 5px;
+  background: #8b24cf;
+  grid-template-columns: minmax(180px, 1fr) 0.5fr;
+  padding: 5px;
+}
+
+footer .contenedor-superior div{
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+footer .contenedor-superior a{
+  margin-left: 20px;
+}
+
+footer .contenedor-medio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #272525;
+  justify-content: center;
+}
+
+footer .contenedor-medio{
+  align-items: center;
+}
+
+footer #servicios-footer  h4{
+  border-bottom: 2px solid #8b24cf;
+  padding: 10px;
+}
+
+footer #contacto-footer  h4{
+  border-bottom: 2px solid #8b24cf;
+  padding: 10px;
+}
+
+footer #contacto-footer .contenido-contacto div{
+  padding: 10px;
+}
+
+footer .footer-copyright{
+  padding: 10px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+
+/*====================================================*/
+
 /*===================PAGINA ERROR=====================*/
 .background-cover-404{
   height: 100vh;
