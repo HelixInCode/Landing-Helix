@@ -456,65 +456,70 @@ main section h2{
 }
 
 /*===================FOOTER===========================*/
-footer{
+footer a{
+  color: #fff;
+}
+footer > .footer-body {
   margin-bottom: 42px;
   background: #1f1e1e;
   display: grid;
   grid-template: 1fr / auto;
   font-family: 'Oswald', sans-serif;
 }
-footer > .contenedor-medio {
+footer > .footer-body > .contenedor-medio {
+  color: #fff;
   display: grid;
   grid-template-columns: 1fr;
   background: #272525;
   justify-content: center;
 }
-footer > .contenedor-medio > #logo-footer,
-footer > .contenedor-medio > #servicios-footer,
-footer > .contenedor-medio > #contacto-footer{
+footer > .footer-body > .contenedor-medio > #logo-footer,
+footer > .footer-body > .contenedor-medio > #servicios-footer,
+footer > .footer-body > .contenedor-medio > #contacto-footer{
   padding: 0 20px;
 }
-footer > .contenedor-medio > #logo-footer{
+footer > .footer-body > .contenedor-medio > #logo-footer{
   align-self: center;
 }
-footer > .contenedor-medio > #logo-footer > a{
+footer > .footer-body > .contenedor-medio > #logo-footer > a{
   margin: 0;
   margin: 10px;
 }
-footer > .contenedor-medio > #servicios-footer  h4{
+footer > .footer-body > .contenedor-medio > #servicios-footer h4{
   border-bottom: 2px solid #8b24cf;
   padding: 10px;
 }
-footer > .contenedor-medio > #servicios-footer > ul{
+footer > .footer-body > .contenedor-medio > #servicios-footer > ul{
   padding-left: 0;
   display: grid;
   grid-template-columns: 1fr;
   text-align: center;
 }
-footer > .contenedor-medio > #servicios-footer > ul > li{
+footer > .footer-body > .contenedor-medio > #servicios-footer > ul > li{
   list-style: none;
   /* justify-self: center; */
   padding: 5px 10px;
 }
-footer > .contenedor-medio > #servicios-footer > ul > li:nth-of-type(1){
+footer > .footer-body > .contenedor-medio > #servicios-footer > ul > li:nth-of-type(1){
   grid-column: 1 / 2;
 }
-footer > .contenedor-medio > #contacto-footer h4{
+footer > .footer-body > .contenedor-medio > #contacto-footer h4{
   border-bottom: 2px solid #8b24cf;
   padding: 10px;
   padding-top: 0;
 }
-footer > .contenedor-medio > #contacto-footer > ul {
+footer > .footer-body > .contenedor-medio > #contacto-footer > ul {
   padding-left: 0;
   text-align: center;
   display: grid;
   grid-template-columns: 1fr;
 }
-footer > .contenedor-medio > #contacto-footer > ul > li{
+footer > .footer-body > .contenedor-medio > #contacto-footer > ul > li{
   list-style: none;
   padding: 5px 10px;
 }
-footer > .copyright{
+footer > .footer-body > .copyright{
+  color: #fff;
   padding: 15px;
   display: flex;
   justify-content: center;
@@ -528,6 +533,9 @@ footer > .copyright{
   }
   .navbar > .navbar-brand > img{
     height: 40px;
+  }
+  footer > .footer-body {
+    margin-bottom: 50px;
   }
 }
 @media screen and (min-width:425px){
@@ -547,6 +555,9 @@ footer > .copyright{
   .fixed-top{
     top: 0;
     bottom: unset;
+  }
+  footer > .footer-body {
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 576px){
@@ -628,17 +639,17 @@ footer > .copyright{
   #planes > .planes-container{
     grid-gap: 30px;
   }
-  footer > .contenedor-medio {
+  footer > .footer-body > .contenedor-medio {
     grid-template-columns: repeat(3, auto);
   }
-  footer > .contenedor-medio > #servicios-footer > ul{
+  footer > .footer-body > .contenedor-medio > #servicios-footer > ul{
     grid-template-columns: repeat(2, 1fr);
     text-align: start;
   }
-  footer > .contenedor-medio > #contacto-footer > ul{
+  footer > .footer-body > .contenedor-medio > #contacto-footer > ul{
     text-align: start;
   }
-  footer > .contenedor-medio > #contacto-footer h4{
+  footer > .footer-body > .contenedor-medio > #contacto-footer h4{
     padding: 10px;
   }
   
@@ -691,9 +702,9 @@ footer > .copyright{
   #contador > .contador-container > .item-contador:nth-of-type(5){
     grid-column: 1 span;
   }
-  footer > .contenedor-medio > #logo-footer,
-  footer > .contenedor-medio > #servicios-footer,
-  footer > .contenedor-medio > #contacto-footer{
+  footer > .footer-body > .contenedor-medio > #logo-footer,
+  footer > .footer-body > .contenedor-medio > #servicios-footer,
+  footer > .footer-body > .contenedor-medio > #contacto-footer{
     padding: 0 40px;
   }
   

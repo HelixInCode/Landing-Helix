@@ -55,39 +55,3 @@ for (let i = 0; i < portafolio.length; i++) {
   })
   
 }
-// for (let i = 0; i < portafolio.length; i++) {
-  
-//   portafolio[i].addEventListener('click', () => {
-    
-
-//     if (portafolio[i].style.zIndex == "") {
-  
-//       portafolio[i].children[0].style.transform = "translateY(-100px)"
-//       portafolio[i].children[1].style.transform = "translateY(100px)"
-//       portafolio[i].style.zIndex = "3"
-  
-//     }else  if (portafolio[i].style.zIndex == "0") {
-  
-//       portafolio[i].children[0].style.transform = "translateY(-100px)"
-//       portafolio[i].children[1].style.transform = "translateY(100px)"
-//       portafolio[i].style.zIndex = "3"
-      
-//     }else if(portafolio[i].style.zIndex == "3"){
-  
-//       portafolio[i].children[0].style.transform = "translateY(0px)"
-//       portafolio[i].children[1].style.transform = "translateY(0px)"
-//       portafolio[i].style.zIndex = "0"
-//       console.log("hola")
-//     }
-//     for (let i2 = 0; i2 < portafolio.length; i2++) {
-
-//       if(portafolio[i2].style.zIndex == "3" && i2 != i ){
-//         portafolio[i2].children[0].style.transform = "translateY(0px)"
-//         portafolio[i2].children[1].style.transform = "translateY(0px)"
-//         portafolio[i2].style.zIndex = "0"
-//       }
-      
-//     }
-//   })
-  
-// }
