@@ -1,4 +1,5 @@
 const $footer = document.getElementById('footer')
+const $nav = document.getElementById('nav')
 
 const platillaFooter = () => {
 
@@ -15,19 +16,19 @@ const platillaFooter = () => {
                 </div>  
                 <ul>
                   <li>
-                    <a href="#?">Diseño Web</a>
+                    <a href="#Landing">Diseño Web</a>
                   </li>
                   <li>
-                    <a href="#?">E-Commerce</a>
+                    <a href="#Ecommerce">E-Commerce</a>
                   </li>
                   <li>
-                    <a href="#?">Marketing Digital</a>
+                    <a href="#Marketing">Marketing Digital</a>
                   </li>
                   <li>
-                    <a href="#?">Analitica Web</a>
+                    <a href="#Analitica">Analitica Web</a>
                   </li>
                   <li>
-                    <a href="#?">Community Manager</a>
+                    <a href="#Community">Community Manager</a>
                   </li>
                 </ul>
                   
@@ -55,11 +56,83 @@ const platillaFooter = () => {
             </div>
           </div>`
 }
+const platillaNav = () => {
+  let pagina;
 
-function añadirFooter(){
-  const $html = document.implementation.createHTMLDocument()
-  $html.body.innerHTML = platillaFooter()
-  $footer.append($html.body.children[0])
+  if ($nav.className == "Home") {
+
+    pagina = "";
+    
+  } else if ($nav.className == "Plans") {
+    
+    pagina = "index.html";
+
+  }
+
+  return `<div class="navbar flex-nowrap fixed-top scrolling-navbar">
+
+            <a class="navbar-brand" href="index.html">
+              <img src="img/Helix-blanco.png" alt="">
+            </a>
+
+            <div class="navbar-collapse px-0 pl-sm-3 col-lg-9">
+
+              <ul id="main-items" class="navbar-nav flex-row ml-auto smooth-scroll">
+                <li class="nav-item">
+                  <a data-scroll class="nav-link" href="${pagina}#inicio">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span></a>
+                </li>
+                <li class="nav-item">
+                  <a data-scroll class="nav-link" href="${pagina}#servicios">
+                    <i class="fas fa-handshake"></i>
+                    <span>Servicios</span></a>
+                </li>
+                <li class="nav-item">
+                  <a data-scroll class="nav-link" href="${pagina}#nosotros">
+                    <i class="fas fa-id-card"></i>
+                    <span>Quiénes Somos</span></a>
+                </li>
+                <li class="nav-item">
+                  <a data-scroll class="nav-link" href="${pagina}#portafolio">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <span>Portafolio</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a data-scroll class="nav-link" href="#planes">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Planes</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a data-scroll class="nav-link" href="${pagina}#contacto">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contacto</span>
+                  </a>
+                </li>
+              </ul>
+
+              <a id="facebook" class="facebook-btn" href="https://www.facebook.com/helixincode.ar/" target="_blank">
+                <i class="fab fa-facebook-square fa-1x"></i>
+              </a>
+              <a id="instagram" class="instagram-btn" href="https://www.instagram.com/helix_in_code/" target="_blank">
+                <i class="fab fa-instagram fa-1x"></i>
+              </a>
+              <a id="whatsapp" class="whatsapp-btn" href="https://api.whatsapp.com/send?phone=584144132836" target="_blank">
+                <i class="fab fa-whatsapp fa-1x"></i>
+              </a>
+              
+            </div>
+          </div>`
 }
 
-añadirFooter()
+function añadirHeaderFooter( $headerFooter, platilla){
+
+  const $html = document.implementation.createHTMLDocument()
+  $html.body.innerHTML = platilla()
+  $headerFooter.append($html.body.children[0])
+}
+
+añadirHeaderFooter($footer, platillaFooter)
+añadirHeaderFooter($nav, platillaNav)
