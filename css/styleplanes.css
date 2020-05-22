@@ -14,12 +14,18 @@ h2 #titulo{
 /* ============== GRIDS ============== */
 
 .background-planes{
-  background: #00d2ff;
+  background-image: url("../img/plan3.png");
+  background-attachment: fixed;
   color: #fff;
   text-align: center;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+}
 .background-planes h1{
-  color: #0000007e;
+  color: #143959d9;
   font-weight: 900;
 }
 .grid-global{
