@@ -52,7 +52,7 @@ const platillaFooter = () => {
 
             <!-- Copyright -->
             <div class="copyright">
-              <span>© 2020 Copyright: <a href="index.html">helixincode.com</a></span>
+              <span>© 2020 Copyright: <a href="index">helixincode.com</a></span>
             </div>
           </div>`
 }
@@ -65,13 +65,13 @@ const platillaNav = () => {
     
   } else if ($nav.className == "Plans") {
     
-    pagina = "index.html";
+    pagina = "index";
 
   }
 
   return `<div class="navbar flex-nowrap fixed-top scrolling-navbar">
 
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index">
               <img src="img/Helix-blanco.png" alt="">
             </a>
 
