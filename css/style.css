@@ -1,6 +1,6 @@
-html{
+/* html{
   scroll-behavior: smooth;
-}
+} */
 nav{
   background-color: transparent !important;
 }
@@ -58,17 +58,17 @@ nav{
   padding: 7px;
 }
 .navbar > .navbar-collapse > .facebook-btn{
-  top: calc(60% - 117px);
+  top: calc(60% - 78px);
   background-color: #3a5894;
 }
 .navbar > .navbar-collapse > .instagram-btn{
-  top: calc(60% - 78px);
+  top: calc(60% - 39px);
   background-color: #ec466c;
 }
-.navbar > .navbar-collapse > .whatsapp-btn{
+/* .navbar > .navbar-collapse > .whatsapp-btn{
   top: calc(60% - 39px);
   background-color: #4ced69;
-}
+} */
 .navbar > .navbar-collapse > a:hover{
   color: #fff;
   padding: 7px 20px;
@@ -93,15 +93,23 @@ nav{
 }
 .background-cover h1{
   /* border: 1px solid #fff; */
-
+  font-weight: bold;
   font-size: 60px;
 }
-.background-cover span{
+.background-cover > span{
   /* border: 1px solid #fff; */
-
+  display: inline-block;
   font-weight: 500;
   /* font-style: italic; */
   font-size: 30px;
+}
+.background-cover > div{
+  /* border: 1px solid #fff; */
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
 }
 .btn{
   background-color: none !important;
@@ -119,14 +127,7 @@ nav{
   transform: translateY(-10px);
 }
 
-.background-cover div{
-  /* border: 1px solid #fff; */
-  display: flex;
-  /* flex-direction: column; */
-  justify-content: center;
-  justify-self: center;
-  align-self: center;
-}
+
 main section h2{
   color: rgb(11, 202, 255);
   font-weight: bold;
@@ -180,6 +181,11 @@ main section h2{
   font-size: small;
   text-align: center;
   justify-self: center;
+}
+#servicios > .services-container > .grid-servicios > .img-container > div > span:nth-of-type(2){
+  display: block;
+  color: #ffffff7b;
+  font-size: 12px;
 }
 
 
@@ -352,32 +358,30 @@ main section h2{
   /* padding: 10px 0; */
   color: #fff;
   font-weight: 500;
+
+  /* font-weight: 900; */
+  font-size: 20px;
 }
 #planes > .planes-container > .item-planes > li > hr{
   height: 0 !important;
   width: 200px;
-  margin: 10px auto;
+  margin: 15px auto;
   padding: 0;
   border-top: 2px solid #fff;
 }
 #planes > .planes-container > .item-planes > li:nth-of-type(1){
-  padding: 10px 0;
+  padding: 15px 0;
   border-radius: 10px 10px 0 0;
   font-size: 20px;
   background-color: #0000007e;
 }
 #planes > .planes-container > .item-planes > li:nth-of-type(2){
-  padding-top: 10px;
+  padding-top: 15px;
 }
-#planes > .planes-container > .item-planes > li:nth-of-type(1){
-  padding-top: 10px;
+#planes > .planes-container > .item-planes > li:nth-of-type(5){
+  margin-bottom: 15px;
 }
-#planes > .planes-container > .item-planes > li:nth-of-type(6){
-  margin-bottom: 10px;
-  font-weight: 900;
-  font-size: 20px;
-}
-#planes > .planes-container > .item-planes > li:nth-of-type(7) > a{
+#planes > .planes-container > .item-planes > li:nth-of-type(6) > a{
   width: 100%;
   height: 100%;
   padding: 5px 0;
@@ -426,6 +430,7 @@ main section h2{
   bottom: 0;
   background: #00000080;
 }
+
 #contacto{
   color: #fff;
   display: grid;
@@ -652,11 +657,12 @@ footer > .footer-body > .copyright{
     bottom: 20px;
   }
   .navbar > .navbar-collapse > .facebook-btn{
-    bottom: 108px;
-  }
-  .navbar > .navbar-collapse > .instagram-btn{
+    /* bottom: 108px; */
     bottom: 64px;
   }
+  /* .navbar > .navbar-collapse > .instagram-btn{
+    bottom: 64px;
+  } */
   .navbar > .navbar-collapse > a:hover{
     padding: 7px 30px;
   }
@@ -677,6 +683,9 @@ footer > .footer-body > .copyright{
   }
   #servicios > .services-container > .grid-servicios > .img-container:nth-of-type(5){
     grid-column: 2 / 4;
+  }
+  #servicios > .services-container > .grid-servicios > .img-container > div > span:nth-of-type(2){
+    display: none;
   }
 
   #nosotros{

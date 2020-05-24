@@ -15,7 +15,10 @@ h2 #titulo{
 
 .background-planes{
   background-image: url("../img/plan3.png");
+  background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
   color: #fff;
   text-align: center;
 }
@@ -30,7 +33,8 @@ h2 #titulo{
 }
 .grid-global{
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(300px, 900px);
+  justify-content: center;
   color: #fff;
   grid-gap: 30px;
   margin-top: 20px;
@@ -100,9 +104,6 @@ h2 #titulo{
   }
 }
 @media screen and (min-width: 992px){
-  .grid-global{
-    grid-template-columns: auto 1fr;
-  }
   .grid-global > .grid-container-arrow{
     grid-template-columns: minmax(300px, 374px);
   }

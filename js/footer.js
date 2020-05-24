@@ -119,10 +119,7 @@ const platillaNav = () => {
               <a id="instagram" class="instagram-btn" href="https://www.instagram.com/helix_in_code/" target="_blank">
                 <i class="fab fa-instagram fa-1x"></i>
               </a>
-              <a id="whatsapp" class="whatsapp-btn" href="https://api.whatsapp.com/send?phone=584144132836" target="_blank">
-                <i class="fab fa-whatsapp fa-1x"></i>
-              </a>
-              
+                           
             </div>
           </div>`
 }
