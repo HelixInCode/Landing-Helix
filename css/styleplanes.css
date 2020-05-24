@@ -15,7 +15,7 @@ h2 #titulo{
 
 .background-planes{
   background-image: url("../img/plan3.png");
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
