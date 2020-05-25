@@ -42,10 +42,17 @@ const platillaFooter = () => {
                     <i class="far fa-envelope"></i>
                     <span>helixincode@gmail.com<!-- (CAMBIAR POR CUENTA EMPRESA) --></span>
                   </li>
+
                   <li>
-                    <i class="far fa-envelope"></i>
-                    <span>+54 9 123 4567890</span>
+                    <i class="fab fa-facebook-square"></i>
+                    <span>facebook.com/helixincode.ar</span>
                   </li>
+
+                  <li>
+                    <i class="fab fa-instagram fa-1x"></i>
+                    <span>instagram.com/helix_in_code<span>
+                  </li>
+
                 </ul> 
               </div>
             </div>
@@ -119,7 +126,7 @@ const platillaNav = () => {
               <a id="instagram" class="instagram-btn" href="https://www.instagram.com/helix_in_code/" target="_blank">
                 <i class="fab fa-instagram fa-1x"></i>
               </a>
-                           
+              
             </div>
           </div>`
 }
