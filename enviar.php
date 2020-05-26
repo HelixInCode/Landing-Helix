@@ -4,7 +4,7 @@ $nombre = $_REQUEST['nombre'];
 $telefono = $_REQUEST['telefono'];
 $email = $_REQUEST['correo'];
 $asunto = $_REQUEST['asunto'];
-$mensaje = $_REQUEST['mensaje'];
+$mensaje1 = $_REQUEST['mensaje'];
 
 
 
@@ -16,7 +16,7 @@ $header .= "Content-Type: text/plain";
 
 $mensaje = "Nombre de Cliente: " . $nombre . ",\r\n";
 $mensaje .= "Telefono: " . $telefono . ",\r\n";
-$mensaje .= "Mensaje: " . $mensaje . ",\r\n";
+$mensaje .= "Mensaje: " . $mensaje1 . ",\r\n";
 
 $mensaje .= "Enviado el " . date('d/m/Y', time());
 
