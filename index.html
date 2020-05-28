@@ -6,7 +6,6 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Helix Intelligence Code</title>
 
-  
   <link rel="stylesheet" href="css/loader.css">
   <!-- MDB icon -->
   <link rel="icon" href="img/helix-icon.png" type="image/x-icon">
@@ -25,7 +24,9 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="body">
-  <div id="loader"></div>
+  <div id="loader">
+   <img src="img/helice2.gif" width="20%"/>
+  </div>
   <!-- Main navigation -->
   <header id="header">
 
@@ -285,29 +286,20 @@
   <!-- End your project here-->
 
   <script type="text/javascript">
-    var loader;
-      function loadNow(opacity) {
-        if (opacity <=0) {
-          diplayContent();
-        }
-        else{
-          loader.style.opacity = opacity;
-          window.setTimeout(function(){
-            loadNow(opacity - 0.05)
-          }, 100);
-        }
-      }
-      function displayContent() {
-        loader.style.display = 'none';
-        document.getElementById('content').style.display = 'block';
-      }
-
-      document.addEventListener("DOMContentLoaded", function(){
-        loader = document.getElementById('loader');
-        loadNow(1);
-      });
- 
+    var loader = document.getElementById("loader");
   
+    window.addEventListener("load",function(){
+
+      loader.style.height="100px";
+
+      loader.style.width="100px";
+
+      loader.style.borderRadius= "50%";
+
+      loader.style.visibility = "hidden"; 
+
+
+    });
   
   </script>
 
