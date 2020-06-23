@@ -254,25 +254,26 @@
         <form action="enviar.php" method="POST" class="formulario">
           <div>
             <i class="fas fa-user-alt"></i>
-            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre">
           </div>
           <div>
             <i class="fas fa-phone"></i>
-            <input type="tel" name="telefono" placeholder="Teléfono">
+            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
           </div>
           <div>
             <i class="fas fa-at"></i>
-            <input type="email" name="correo" placeholder="E-mail">
+            <input type="email" id="correo" name="correo" placeholder="E-mail">
           </div>
           <div>
             <i class="fas fa-edit"></i>
-            <input type="text" name="asunto" placeholder="Asunto">
+            <input type="text" id="asunto" name="asunto" placeholder="Asunto">
           </div>
           <div>
             <i class="fas fa-envelope"></i>
-            <textarea name="mensaje"></textarea>
+            <textarea id="mensaje" name="mensaje"></textarea>
           </div>
-          <button type="submit" class="btn mt-4">Enviar</button>
+          <img id="img-enviado" src="./img/enviado.svg" alt="">
+          <button id="btnEnviar" type="submit" class="btn mt-4 ">Enviar</button>
         </form>
       </div>
     </section>
@@ -328,7 +329,8 @@
   <script src="js/smoot-scroll-custom.js"></script> 
   <!-- contador.js -->
   <script src="js/contador.js"></script>
-
+  <!-- formulario.js -->
+  <script src="js/formulario.js"></script>
 
 </body>
 </html>
