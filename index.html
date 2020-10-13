@@ -321,8 +321,30 @@
             <i class="fas fa-envelope"></i>
             <textarea id="mensaje" name="mensaje"></textarea>
           </div>
-          <img id="img-enviado" src="./img/enviado.svg" alt="">
+          <div id="repatcha1">
+            <div  class="g-recaptcha" data-sitekey="6Le_BtcZAAAAADtvtvPoy8s6hnk4fOd_0evq55NL"></div>
+          </div>
+          <!-- <?php			                                                       
+          if($_GET["mensaje"]=='humanCaptcha')
+          {
+          ?>
+          <div class="alert alert-danger">
+              <p>Problemas con la validación.</p>
+          </div>
+          <?php
+          }
+                if($_GET["mensaje"]=='errorCaptcha')
+          {
+          ?>
+            <div class="alert alert-danger">
+            <p>Es necesario rellenar el Captcha.</p>
+            </div>
+          <?php
+                      }
+          ?> -->
+          
           <button id="btnEnviar" type="submit" class="btn mt-4 ">Enviar</button>
+
         </form>
       </div>
     </section>
@@ -359,6 +381,7 @@
   <!-- smooth.js -->
   <script src="js/smooth-scroll.polyfills.min.js"></script>   
   <script src="js/smoot-scroll-custom.js"></script> 
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <!-- contador.js -->
   <script src="js/contador.js"></script>
   <!-- formulario.js -->
