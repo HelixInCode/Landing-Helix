@@ -40,7 +40,7 @@ const platillaFooter = () => {
                 <ul class="contenido-contacto">
                   <li>
                     <i class="far fa-envelope"></i>
-                    <span>helixincode@gmail.com<!-- (CAMBIAR POR CUENTA EMPRESA) --></span>
+                    <span> info@helixincode.com<!-- (CAMBIAR POR CUENTA EMPRESA) --></span>
                   </li>
 
                   <li>
