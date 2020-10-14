@@ -309,53 +309,43 @@
     <section id="contacto" class="container-fluid m-md-0 py-5 px-2 p-md-5">
       <div class="pt-3 pb-4 px-3 px-sm-5">
         <h3>CONTACTO</h3>
+
         <hr class="mt-3 mb-5" style="background-color: #fff; width: 100%; height:1px;">
-        <form action="enviar.php" method="POST" class="formulario">
+
+        <form id="form" action="enviar.php" method="POST" class="formulario">
           <div class="input-container">
             <i class="fas fa-user-alt"></i>
             <input type="text" id="nombre" name="nombre" placeholder="Nombre">
           </div>
+          
           <div class="input-container">
             <i class="fas fa-phone"></i>
             <input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
           </div>
+          
           <div class="input-container">
             <i class="fas fa-at"></i>
             <input type="email" id="correo" name="correo" placeholder="E-mail">
           </div>
+          
           <div class="input-container">
             <i class="fas fa-edit"></i>
             <input type="text" id="asunto" name="asunto" placeholder="Asunto">
           </div>
+          
           <div class="input-container">
             <i class="fas fa-envelope"></i>
             <textarea id="mensaje" name="mensaje"></textarea>
           </div>
+          
           <div id="repatcha1">
-            <div  class="g-recaptcha" data-sitekey="6Le_BtcZAAAAADtvtvPoy8s6hnk4fOd_0evq55NL"></div>
+            <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
           </div>
-          <!-- <?php			                                                       
-          if($_GET["mensaje"]=='humanCaptcha')
-          {
-          ?>
-          <div class="alert alert-danger">
-              <p>Problemas con la validación.</p>
-          </div>
-          <?php
-          }
-                if($_GET["mensaje"]=='errorCaptcha')
-          {
-          ?>
-            <div class="alert alert-danger">
-            <p>Es necesario rellenar el Captcha.</p>
-            </div>
-          <?php
-                      }
-          ?> -->
           
           <button id="btnEnviar" type="submit" class="btn mt-4 ">Enviar</button>
 
         </form>
+
       </div>
     </section>
 
@@ -391,11 +381,38 @@
   <!-- smooth.js -->
   <script src="src/js/smooth-scroll.polyfills.min.js"></script>   
   <script src="src/js/smoot-scroll-custom.js"></script> 
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6Le_BtcZAAAAADtvtvPoy8s6hnk4fOd_0evq55NL"></script>
+  <!--ManyChat Facebook-->
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        xfbml            : true,
+        version          : 'v8.0'
+      });
+    };
+
+    (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your Chat Plugin code -->
+    <div class="fb-customerchat"
+      attribution=setup_tool
+      page_id="106930851012222"
+    logged_in_greeting="Hola! Gracias por Comunicarte con Nosotros!... En que podemos ayudarte?"
+    logged_out_greeting="Hola! Gracias por Comunicarte con Nosotros!... En que podemos ayudarte?">
+    </div>
   <!-- contador.js -->
   <script src="src/js/contador.js"></script>
   <!-- formulario.js -->
   <script src="src/js/formulario.js"></script>
+  <script src="./src/js/recaptcha.js"></script>
 
 
 </body>
