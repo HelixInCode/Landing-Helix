@@ -50,10 +50,10 @@ nav{
   justify-content: center;
   align-items: center;
   position: fixed;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   font-size: 25px;
-  right: 0;
+  left: 0;
   color: #fff;
   padding: 7px;
 }
@@ -663,7 +663,7 @@ footer > .footer-body > .copyright{
   .navbar > .navbar-collapse > .facebook-btn{
     border-radius: 5px;
     top: unset;
-    right: 20px;
+    left: 20px;
     bottom: 20px;
   }
   .navbar > .navbar-collapse > .facebook-btn{
