@@ -1,0 +1,45 @@
+#loader{
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: minmax(100px, 400px);
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  animation-name: desaparecer;
+  animation-duration: .5s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  /* animation-iteration-count: infinite; */
+  animation-play-state: running;
+  animation-timing-function: linear;
+}
+#loader > img{
+  animation-name: loaderRotates;
+  animation-duration: .8s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: linear;
+}
+@keyframes loaderRotates{
+  from{
+    transform: rotateZ(0deg);
+  }
+  to{
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes desaparecer{
+  from{
+    transform: scale(1);
+    border-radius: 0;
+  }
+  to{
+    transform: scale(0);
+    border-radius: 50%;
+  }
+}

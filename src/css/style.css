@@ -464,26 +464,26 @@ main section h2{
   grid-template: auto auto auto auto 100px auto / 1fr;
   grid-gap: 10px;
 }
-#contacto > div > .formulario > div{
+#contacto > div > .formulario > .input-container{
   display: grid;
   grid-template-columns: 30px 1fr;
 }
-#contacto > div > .formulario > div > i{
+#contacto > div > .formulario > .input-container > i{
   margin: auto auto;
   transition: .3s;
 }
-#contacto > div > .formulario > div:hover > i{
+#contacto > div > .formulario > .input-container:hover > i{
   transform: rotateZ(360deg);
 }
-#contacto > div > .formulario > div:nth-of-type(2) > i{
+#contacto > div > .formulario > .input-container:nth-of-type(2) > i{
   transition: .3s;
   transform: rotateZ(90deg);
 }
-#contacto > div > .formulario > div:nth-of-type(2):hover > i{
+#contacto > div > .formulario > .input-container:nth-of-type(2):hover > i{
   transform: rotateZ(450deg);
 }
-#contacto > div > .formulario > div > input,
-#contacto > div > .formulario > div > textarea{
+#contacto > div > .formulario > .input-container > input,
+#contacto > div > .formulario > .input-container > textarea{
   border: none;
   color: #fff;
   outline: none;
@@ -492,8 +492,11 @@ main section h2{
   border-bottom: 1px solid #fff;
   padding: 10px;
 }
-#contacto > div > .formulario > div:nth-of-type(5) > i{
+#contacto > div > .formulario > .input-container:nth-of-type(5) > i{
   margin-top: 10px;
+}
+#contacto > div > .formulario > #repatcha1{
+  grid-column: 2 span;
 }
 #contacto > div > .formulario > button{
   width: 100%;
@@ -631,11 +634,11 @@ footer > .footer-body > .copyright{
   #contacto > div > .formulario{
     grid-template: auto auto 100px auto / 1fr 1fr;
   }
-  #contacto > div > .formulario > div:nth-of-type(1),
-  #contacto > div > .formulario > div:nth-of-type(3){
+  #contacto > div > .formulario > .input-container:nth-of-type(1),
+  #contacto > div > .formulario > .input-container:nth-of-type(3){
     grid-template-columns: 30px 0.95fr;
   }
-  #contacto > div > .formulario > div:nth-of-type(5){
+  #contacto > div > .formulario > .input-container:nth-of-type(5){
     grid-column: 1 / 3;
   }
   #contacto > div > .formulario button{
