@@ -305,7 +305,7 @@
       <div class="pt-3 pb-4 px-3 px-sm-5">
         <h3>CONTACTO</h3>
         <hr class="mt-3 mb-5" style="background-color: #fff; width: 100%; height:1px;">
-        <form action="enviar.php" method="POST" class="formulario">
+        <form id="form" action="enviar.php" method="POST" class="formulario">
           <div>
             <i class="fas fa-user-alt"></i>
             <input type="text" id="nombre" name="nombre" placeholder="Nombre">
@@ -327,26 +327,8 @@
             <textarea id="mensaje" name="mensaje"></textarea>
           </div>
           <div id="repatcha1">
-            <div  class="g-recaptcha" data-sitekey="6Le_BtcZAAAAADtvtvPoy8s6hnk4fOd_0evq55NL"></div>
+            <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
           </div>
-          <!-- <?php			                                                       
-          if($_GET["mensaje"]=='humanCaptcha')
-          {
-          ?>
-          <div class="alert alert-danger">
-              <p>Problemas con la validación.</p>
-          </div>
-          <?php
-          }
-                if($_GET["mensaje"]=='errorCaptcha')
-          {
-          ?>
-            <div class="alert alert-danger">
-            <p>Es necesario rellenar el Captcha.</p>
-            </div>
-          <?php
-                      }
-          ?> -->
           
           <button id="btnEnviar" type="submit" class="btn mt-4 ">Enviar</button>
 
@@ -386,7 +368,7 @@
   <!-- smooth.js -->
   <script src="src/js/smooth-scroll.polyfills.min.js"></script>   
   <script src="src/js/smoot-scroll-custom.js"></script> 
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6Le_BtcZAAAAADtvtvPoy8s6hnk4fOd_0evq55NL"></script>
   <!--ManyChat Facebook-->
   <!-- Load Facebook SDK for JavaScript -->
   <div id="fb-root"></div>
@@ -417,6 +399,7 @@
   <script src="src/js/contador.js"></script>
   <!-- formulario.js -->
   <script src="src/js/formulario.js"></script>
+  <script src="./src/js/recaptcha.js"></script>
 
 
 </body>
