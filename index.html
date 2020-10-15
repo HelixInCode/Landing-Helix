@@ -19,7 +19,7 @@
   <!-- Material Design Bootstrap -->
   <link rel="stylesheet" href="dist/css/mdb.min.css">
   <!-- Your custom styles (optional) -->
-  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="dist/css/style.css">
   <link rel="stylesheet" href="src/css/loader.css">
 </head>
 <body id="body">
@@ -46,8 +46,9 @@
   </header>
   <!-- Main navigation -->
   <main class="position-relative">
-    <section id="loader">
-      <img class="img-fluid" src="dist/img/helice2.svg" alt="">
+
+    <section id="loader" class="bg-dark">
+      <img class="img-fluid px-5" src="dist/img/helice.svg" alt="">
     </section>
 
     <section id="servicios" class="container-fluid px-0 px-sm-2 px-md-3 px-xl-5 pt-5 pb-lg-5">
@@ -264,7 +265,7 @@
         </ul>
         <a href="planes" class="btn">MÁS INFO</a>
       </div>
-      <div>
+      <div class="planes-overlay">
         <!-- overlay -->
       </div>
     </section>
@@ -338,9 +339,7 @@
             <textarea id="mensaje" name="mensaje"></textarea>
           </div>
           
-          <div id="repatcha1">
-            <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
-          </div>
+          <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
           
           <button id="btnEnviar" type="submit" class="btn mt-4 ">Enviar</button>
 
@@ -349,7 +348,21 @@
       </div>
     </section>
 
-    <div id="particles-js" style="background-color: #161616;"></div>
+    <section id="modal-message-sent" class="modal hide">
+      <div class="login">
+        <div class="title-container p-3">
+          <!-- <h5>Mensaje Enviado</h5> -->
+          <i id="close-sent" class="fa fa-times"></i>
+        </div>
+        <div class="main-container message p-3 pb-4">
+          <img width="200" src="dist/img/enviado.svg" alt="">
+          <!-- <i class="fas fa-check-circle"></i> -->
+          <p class="text-center">¡Su mensaje ha sido enviado exitosamente!</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="particles-js" class="bg-dark"></div>
   </main>
 
   <footer id="footer">
@@ -357,6 +370,7 @@
   </footer>
 
   <!-- End your project here-->
+  <script type="text/javascript" src="src/js/loader.js"></script>
 
   <!-- jQuery -->
   <script type="text/javascript" src="dist/js/jquery.min.js"></script>
@@ -374,6 +388,7 @@
   <!-- Your custom scripts (optional) -->
   <script type="text/javascript" src="src/js/myscript.js"></script>
   <script type="text/javascript" src="src/js/footer.js"></script>
+  <script type="text/javascript" src="src/js/hideShowModals.js"></script>
   <!-- particles.js -->
   <script src="src/js/particles/js/particles.js"></script>   
   <script src="src/js/particles/js/lib/stats.js"></script>     
@@ -382,38 +397,26 @@
   <script src="src/js/smooth-scroll.polyfills.min.js"></script>   
   <script src="src/js/smoot-scroll-custom.js"></script> 
   <script src="https://www.google.com/recaptcha/api.js?render=6Le_BtcZAAAAADtvtvPoy8s6hnk4fOd_0evq55NL"></script>
+  
   <!--ManyChat Facebook-->
   <!-- Load Facebook SDK for JavaScript -->
   <div id="fb-root"></div>
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        xfbml            : true,
-        version          : 'v8.0'
-      });
-    };
+  <script src="src/js/facebook.js"></script>
+  <!-- Your Chat Plugin code -->
+  <div class="fb-customerchat"
+    attribution=setup_tool
+    page_id="106930851012222"
+  logged_in_greeting="Hola! Gracias por Comunicarte con Nosotros!... En que podemos ayudarte?"
+  logged_out_greeting="Hola! Gracias por Comunicarte con Nosotros!... En que podemos ayudarte?">
+  </div>
 
-    (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-    fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-    <!-- Your Chat Plugin code -->
-    <div class="fb-customerchat"
-      attribution=setup_tool
-      page_id="106930851012222"
-    logged_in_greeting="Hola! Gracias por Comunicarte con Nosotros!... En que podemos ayudarte?"
-    logged_out_greeting="Hola! Gracias por Comunicarte con Nosotros!... En que podemos ayudarte?">
-    </div>
   <!-- contador.js -->
   <script src="src/js/contador.js"></script>
   <!-- formulario.js -->
   <script src="src/js/formulario.js"></script>
   <script src="./src/js/recaptcha.js"></script>
 
-
+  
+  <!-- $messageSent.classList.toggle('hide') -->
 </body>
 </html>

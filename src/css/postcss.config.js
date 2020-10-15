@@ -12,6 +12,6 @@ module.exports = {
       }
     }),
     require('css-mqpacker'),
-    // require('cssnano')
+    require('cssnano')
   ]
 }

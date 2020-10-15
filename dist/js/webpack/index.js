@@ -7,35 +7,35 @@ webpackJsonp([0],[
 
 __webpack_require__(1);
 
-__webpack_require__(2);
-
-__webpack_require__(3);
-
-__webpack_require__(4);
-
 __webpack_require__(5);
 
 __webpack_require__(6);
+
+__webpack_require__(7);
 
 __webpack_require__(8);
 
 __webpack_require__(9);
 
-__webpack_require__(10);
-
 __webpack_require__(11);
 
 __webpack_require__(12);
 
-var _backgroundCode = __webpack_require__(13);
+__webpack_require__(13);
+
+__webpack_require__(14);
+
+__webpack_require__(15);
+
+var _backgroundCode = __webpack_require__(3);
 
 var _backgroundCode2 = _interopRequireDefault(_backgroundCode);
 
-var _contadorBackground = __webpack_require__(14);
+var _contadorBackground = __webpack_require__(4);
 
 var _contadorBackground2 = _interopRequireDefault(_contadorBackground);
 
-var _portada = __webpack_require__(15);
+var _portada = __webpack_require__(2);
 
 var _portada2 = _interopRequireDefault(_portada);
 
@@ -77,10 +77,28 @@ $BackgroundCover.style.backgroundImage = 'url(' + _portada2.default + ')';
 /* 1 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleParseError: Module parse failed: Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)\n    at C:\\Users\\ORLANDO\\Desktop\\webs\\paginas\\Landing-Helix\\node_modules\\webpack\\lib\\NormalModule.js:303:19\n    at C:\\Users\\ORLANDO\\Desktop\\webs\\paginas\\Landing-Helix\\node_modules\\webpack\\lib\\NormalModule.js:209:11\n    at C:\\Users\\ORLANDO\\Desktop\\webs\\paginas\\Landing-Helix\\node_modules\\loader-runner\\lib\\LoaderRunner.js:373:3\n    at iterateNormalLoaders (C:\\Users\\ORLANDO\\Desktop\\webs\\paginas\\Landing-Helix\\node_modules\\loader-runner\\lib\\LoaderRunner.js:214:10)\n    at Array.<anonymous> (C:\\Users\\ORLANDO\\Desktop\\webs\\paginas\\Landing-Helix\\node_modules\\loader-runner\\lib\\LoaderRunner.js:205:4)\n    at Storage.finished (C:\\Users\\ORLANDO\\Desktop\\webs\\paginas\\Landing-Helix\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:40:15)\n    at C:\\Users\\ORLANDO\\Desktop\\webs\\paginas\\Landing-Helix\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:77:9\n    at C:\\Users\\ORLANDO\\Desktop\\webs\\paginas\\Landing-Helix\\node_modules\\graceful-fs\\graceful-fs.js:123:16\n    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)");
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -104,7 +122,7 @@ var typed = new Typed('.typed', {
 });
 
 /***/ }),
-/* 3 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -154,7 +172,7 @@ for (var i = 0; i < portafolio.length; i++) {
 }
 
 /***/ }),
-/* 4 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -192,7 +210,7 @@ añadirHeaderFooter($footer, platillaFooter);
 añadirHeaderFooter($nav, platillaNav);
 
 /***/ }),
-/* 5 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1584,7 +1602,7 @@ window.particlesJS.load = function (tag_id, path_config_json, callback) {
 };
 
 /***/ }),
-/* 6 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1739,10 +1757,10 @@ if (( false ? 'undefined' : _typeof(module)) === 'object') {
 
 	module.exports = Stats;
 }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 7 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1772,7 +1790,7 @@ module.exports = function (module) {
 };
 
 /***/ }),
-/* 8 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1890,7 +1908,7 @@ particlesJS('particles-js', {
 });
 
 /***/ }),
-/* 9 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2027,7 +2045,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 });
 
 /***/ }),
-/* 10 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2042,7 +2060,7 @@ var scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 /***/ }),
-/* 11 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2099,7 +2117,7 @@ addEventListener('DOMContentLoaded', function () {
 });
 
 /***/ }),
-/* 12 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2180,24 +2198,6 @@ function validarEmail(email) {
         email.style.borderBottom = '1px solid red';
     }
 }
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports) {
-
-throw new Error("Module parse failed: Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports) {
-
-throw new Error("Module parse failed: Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports) {
-
-throw new Error("Module parse failed: Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ })
 ],[0]);
