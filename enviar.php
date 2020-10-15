@@ -27,9 +27,15 @@ if ($recaptcha->score >= 0.8) {
     $para = 'helixincode@gmail.com';
     $asunto = 'Mensaje enviado desde la página Helix';
 
-    mail($para, $asunto, utf8_decode($mensaje), $header);
+    $envio = mail($para, $asunto, utf8_decode($mensaje), $header);
 
     header("Location:../index.html");
+
+    if ($envio) {
+        echo json_encode("si se envio");
+    } else {
+        echo json_encode("Error al enviar el mail");
+    }
 } else {
     // KO. ERES ROBOT, EJECUTA ESTE CÓDIGO
 }
