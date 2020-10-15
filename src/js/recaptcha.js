@@ -1,12 +1,14 @@
 
-function onClick(e) {
+
+document.querySelector('#form').addEventListener('submit', (e) =>{
   e.preventDefault();
+  console.log('lanzando recaptcha');
+  /*Cambia 6LcZu9QUAAAAACaj-WBiVIQUlr94vfCC8DUpIanS por tu clave de sitio web*/
   grecaptcha.ready(function() {
-    grecaptcha.execute('6Le_BtcZAAAAADtvtvPoy8s6hnk4fOd_0evq55NL', {action: 'submit'})
-    .then(function(token) {
-        // Add your logic to submit to your backend server here.
-        var recaptchaResponse = document.getElementById('recaptchaResponse');
-        recaptchaResponse.value = token;
-    });
+      grecaptcha.execute('6LeYwtcZAAAAAOm29aUx7Upt_KvTj9mEo1o5CmFc', {action: 'registro'}).then(function(token) {
+          $('#form').prepend('<input type="hidden" name="token" value="' + token + '">');
+          $('#form').prepend('<input type="hidden" name="action" value="registro">');
+          $('#form').unbind('submit').submit();
+      });;
   });
-}
+});
