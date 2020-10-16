@@ -839,6 +839,10 @@ footer > .footer-body > .contenedor-medio > #logo-footer > a{
   margin: 0;
   margin: 10px;
 }
+footer > .footer-body > .contenedor-medio > #logo-footer > a > img{
+  width: 100%;
+  max-width: 246px;
+}
 footer > .footer-body > .contenedor-medio > #servicios-footer > ul{
   padding-left: 0;
   display: grid;

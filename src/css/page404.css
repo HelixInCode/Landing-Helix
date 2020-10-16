@@ -2,7 +2,7 @@
 .background-cover-404{
   height: 100vh;
   padding-top: 0px;
-  background-image: url(../dist/img/back-404.jpg);
+  background-image: url(../../dist/img/back-404.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

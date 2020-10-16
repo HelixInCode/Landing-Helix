@@ -7,7 +7,7 @@ const platillaFooter = () => {
             <div class="contenedor-medio text-center text-md-center">
               <div id="logo-footer" class="mx-auto">
                 <a class="navbar-brand" href="#">
-                  <img class="img-fluid" src="dist/img/helix-blanco-logo-footer.png" alt="Logo Helix Intelligence Code">
+                  <img src="dist/img/Helix-blanco.svg" alt="Logo Helix Intelligence Code">
                 </a>
               </div>
               <div id="servicios-footer">
@@ -79,7 +79,7 @@ const platillaNav = () => {
   return `<div class="navbar flex-nowrap fixed-top scrolling-navbar">
 
             <a class="navbar-brand" href="index">
-              <img src="dist/img/Helix-blanco.png" alt="Logo Helix Intelligence Code">
+              <img src="dist/img/Helix-blanco.svg" alt="Logo Helix Intelligence Code">
             </a>
 
             <div class="navbar-collapse px-0 pl-sm-3 col-lg-9">
