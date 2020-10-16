@@ -1,8 +1,0 @@
-﻿Options All -Indexes
-
-ErrorDocument 404 /Landing-Helix-1/page404.html
-ErrorDocument 403 /Landing-Helix-1/page403.html
-
-RewriteEngine On
-
-RewriteRule ^([a-zA-Z0-9/]+)$ $1.html

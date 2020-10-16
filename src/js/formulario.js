@@ -21,7 +21,7 @@ function eventListeners() {
     mensaje.addEventListener('blur', validarCampo);
 
     //habilitar boton enviar
-    btnEnviar.addEventListener('click', enviarEmail);
+   // btnEnviar.addEventListener('click', enviarEmail);
 
 }
 
@@ -47,17 +47,11 @@ function validarCampo(){
     }
 }
 
-function enviarEmail(e){
+/*function enviarEmail(e){
     e.preventDefault();
     
     console.log('email enviado');
-    setTimeout(function () {
-        img.style.display = 'block';
-    }, 2000);
-
-    
-
-}
+}*/
 
 
 function validarLongitud(campo){

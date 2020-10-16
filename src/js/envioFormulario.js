@@ -10,10 +10,9 @@ const mensajeDelModal = (simbolo, mensaje) =>{
 
 }
 $form.addEventListener('submit', (event) => {
-
   event.preventDefault();
 
-  (async()=>{
+  const enviarFormulario = async()=>{
     
     try {
       const formulario = new FormData($form);
@@ -22,12 +21,13 @@ $form.addEventListener('submit', (event) => {
         body: formulario
       });
       const data = await response.json()
-
-      if(data === 'si se envio'){
+      console.log(data)
+      
+      if(data === 'ok!, eres un humano'){
         $form.reset()
         mensajeDelModal('enviado.svg', '¡Su mensaje ha sido enviado exitosamente!')
         
-      }else if('Error al enviar el mail'){
+      }else if(data === "Lo siento, parece que eres un Robot"){
         
         mensajeDelModal('envioError.svg', '¡Ha habido un error, intentelo de nuevo!')
       }
@@ -38,5 +38,9 @@ $form.addEventListener('submit', (event) => {
       mensajeDelModal('envioError.svg', '¡Ha habido un error, intentelo de nuevo!')
     }
 
-  })();
+  }  
+
+  console.log('se envio el formulario')
+  enviarFormulario()
+  
 })
