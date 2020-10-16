@@ -6,30 +6,43 @@ $email = $_REQUEST['correo'];
 $asunto = $_REQUEST['asunto'];
 $mensaje1 = $_REQUEST['mensaje'];
 
-$recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-$recaptcha_secret = '6Le_BtcZAAAAAFtYt72Shr4Hq_xihd3_74BZltul';
-$recaptcha_response = $_POST['recaptcha_response'];
-$recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
-$recaptcha = json_decode($recaptcha);
+$header = 'From: ' . $email . " \r\n";
+$header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
+$header .= "Mime-Version: 1.0 \r\n";
+$header .= "Content-Type: text/plain";
 
-if ($recaptcha->score >= 0.8) {
-    $header = 'From: ' . $email . " \r\n";
-    $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
-    $header .= "Mime-Version: 1.0 \r\n";
-    $header .= "Content-Type: text/plain";
+$mensaje = "Nombre de Cliente: " . $nombre . ",\r\n";
+$mensaje .= "Telefono: " . $telefono . ",\r\n";
+$mensaje .= "Mensaje: " . $mensaje1 . ",\r\n";
 
-    $mensaje = "Nombre de Cliente: " . $nombre . ",\r\n";
-    $mensaje .= "Telefono: " . $telefono . ",\r\n";
-    $mensaje .= "Mensaje: " . $mensaje1 . ",\r\n";
+$mensaje .= "Enviado el " . date('d/m/Y', time());
 
-    $mensaje .= "Enviado el " . date('d/m/Y', time());
+$para = 'helixincode@gmail.com';
+$asunto = 'Mensaje enviado desde la página Helix';
 
-    $para = 'helixincode@gmail.com';
-    $asunto = 'Mensaje enviado desde la página Helix';
+define("RECAPTCHA_V3_SECRET_KEY", '6LeYwtcZAAAAAIfCCmIDxrvmoO_QpOjZDxL_zEMv');
 
-    mail($para, $asunto, utf8_decode($mensaje), $header);
+$token = $_POST['token'];
+$action = $_POST['action'];
+
+// call curl to POST request
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(array('secret' => RECAPTCHA_V3_SECRET_KEY, 'response' => $token)));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$response = curl_exec($ch);
+curl_close($ch);
+$arrResponse = json_decode($response, true);
+
+// verificar la respuesta
+if ($arrResponse["success"] == '1' && $arrResponse["action"] == $action && $arrResponse["score"] >= 0.5) {
+    // Si entra aqui, es un humano, puedes procesar el formulario
+    echo "ok!, eres un humano";
+    $envio = mail($para, $asunto, utf8_decode($mensaje), $header);
 
     header("Location:../index.html");
 } else {
-    // KO. ERES ROBOT, EJECUTA ESTE CÓDIGO
+    // Si entra aqui, es un robot....
+    echo "Lo siento, parece que eres un Robot";
 }
