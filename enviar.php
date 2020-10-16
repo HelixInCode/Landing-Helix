@@ -37,12 +37,31 @@ $arrResponse = json_decode($response, true);
 
 // verificar la respuesta
 if ($arrResponse["success"] == '1' && $arrResponse["action"] == $action && $arrResponse["score"] >= 0.5) {
+<<<<<<< HEAD
+    
+    
+    // Si entra aqui, es un humano, puedes procesar el formulario
+=======
     // Si entra aqui, es un humano, puedes procesar el formulario
     echo "ok!, eres un humano";
+>>>>>>> 9d92f3d014ad6ce0bdfdbe1fba9122a91b0d5a59
     $envio = mail($para, $asunto, utf8_decode($mensaje), $header);
+    //header("Location:./index");
+    header("Location: https://helixincode.com/enviado");
+    exit;
 
+<<<<<<< HEAD
+    
+} else {
+    // Si entra aqui, es un robot....
+    //echo "Lo siento, parece que eres un Robot";
+    header("Location: https://helixincode.com/noenviado");
+    exit;
+    
+=======
     header("Location:../index.html");
 } else {
     // Si entra aqui, es un robot....
     echo "Lo siento, parece que eres un Robot";
+>>>>>>> 9d92f3d014ad6ce0bdfdbe1fba9122a91b0d5a59
 }
